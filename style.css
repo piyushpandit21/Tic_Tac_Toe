@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background: #183d3d;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #5c8374;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 130px);
+  justify-content: center;
+}
+
+.cell {
+  width: 130px;
+  height: 130px;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.cell.X {
+  color: #ff6347;
+}
+.cell.O {
+  color: #1e90ff;
+}
+
+p{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #5c8374;
+}
+
+.square {
+  border-width: 5px;
+  border-color: #fff;
+  cursor: pointer
+}
+
+.square.top {
+  border-bottom-style: solid;
+}
+
+.square.bottom {
+  border-top-style: solid
+}
+
+.square.left {
+  border-right-style: solid;
+}
+
+.square.right {
+  border-left-style: solid
+}
+
+#restart-button {
+  width: 140px;
+  height: 45px;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #5c8374;
+  border: none;
+  border-radius: 45px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+#restart-button:hover {
+  background-color: #183d3d;
+  box-shadow: 0px 0px 20px #5c8374;
+  color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  #board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    justify-content: center;
+  }
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
